@@ -5,30 +5,30 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Анастасия К.",
-    role: "Пациент",
-    text: "Грамотный доктор и очень внимательный человек. Выслушала, все доходчиво объяснила и дала понятный план лечения.",
+    name: "Пациент +7 913 94XXXX",
+    role: "02.10.2025",
+    text: "Очень внимательная и грамотная. Подробно изучила обследования, объяснила план лечения и дала рекомендации по образу жизни.",
     rating: 5,
     verified: true,
   },
   {
-    name: "Сергей П.",
-    role: "Пациент",
-    text: "Профессионал своего дела. Прием длился почти час, разобрали все анализы и нашли причину перебоев в сердце.",
+    name: "Пациент +7 913 75XXXX",
+    role: "08.08.2025",
+    text: "Полностью разобрала ситуацию, объяснила диагноз и назначила терапию. Очень высокий уровень компетенций.",
     rating: 5,
     verified: true,
   },
   {
-    name: "Марина И.",
-    role: "Пациент",
-    text: "Великолепный доктор! Задает много вопросов, объясняет доступно и очень бережно относится к пациенту.",
+    name: "Пациент +7 913 48XXXX",
+    role: "14.02.2024",
+    text: "Помогла разобраться в сложной ситуации с аритмией и корректно скорректировала лечение. Спасибо за поддержку.",
     rating: 5,
     verified: true,
   },
   {
-    name: "Игорь Н.",
-    role: "Пациент",
-    text: "Были приступы учащенного сердцебиения. После консультации стало понятно, что делать дальше. Спасибо за чуткость.",
+    name: "Пациент +7 983 28XXXX",
+    role: "20.04.2023",
+    text: "Внимательно выслушала, всё доходчиво объяснила и дала четкие рекомендации. Осталась очень довольна.",
     rating: 5,
     verified: true,
   },
@@ -58,7 +58,7 @@ export default function Testimonials() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal" data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Отзывы пациентов
             </h2>
@@ -69,7 +69,7 @@ export default function Testimonials() {
 
           <div className="relative mb-16">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-emerald-100 relative overflow-hidden transition-all duration-500 hover:shadow-2xl">
+              <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-emerald-100 relative overflow-hidden transition-all duration-500 hover:shadow-2xl reveal" data-reveal style={{ transitionDelay: "120ms" }}>
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-emerald-100 to-transparent rounded-bl-full opacity-60" />
 
                 <div className="relative z-10">
@@ -140,19 +140,19 @@ export default function Testimonials() {
           </div>
 
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="text-center reveal" data-reveal style={{ transitionDelay: "120ms" }}>
               <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600 mb-2">
                 5.0/5
               </div>
               <div className="text-slate-600 font-medium">Средняя оценка</div>
             </div>
-            <div className="text-center">
+            <div className="text-center reveal" data-reveal style={{ transitionDelay: "180ms" }}>
               <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600 mb-2">
                 35+
               </div>
               <div className="text-slate-600 font-medium">Отзывов пациентов</div>
             </div>
-            <div className="text-center">
+            <div className="text-center reveal" data-reveal style={{ transitionDelay: "240ms" }}>
               <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600 mb-2">
                 до 60 мин
               </div>

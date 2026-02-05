@@ -57,7 +57,7 @@ export default function BookingForm() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 reveal" data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Записаться на онлайн-консультацию
             </h2>
@@ -66,7 +66,7 @@ export default function BookingForm() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 border border-emerald-100">
+          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 border border-emerald-100 reveal" data-reveal style={{ transitionDelay: "120ms" }}>
             {status === "success" ? (
               <div className="text-center py-12">
                 <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">

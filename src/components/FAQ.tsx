@@ -50,7 +50,7 @@ export default function FAQ() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal" data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Частые вопросы
             </h2>
@@ -63,7 +63,9 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-emerald-50 to-white rounded-xl border border-emerald-100 hover:border-emerald-200 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg"
+                className="bg-gradient-to-br from-emerald-50 to-white rounded-xl border border-emerald-100 hover:border-emerald-200 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg reveal"
+                data-reveal
+                style={{ transitionDelay: `${index * 60}ms` }}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -90,7 +92,7 @@ export default function FAQ() {
             ))}
           </div>
 
-          <div className="mt-12 text-center bg-gradient-to-r from-emerald-50 to-sky-50 rounded-2xl p-8 border border-emerald-100">
+          <div className="mt-12 text-center bg-gradient-to-r from-emerald-50 to-sky-50 rounded-2xl p-8 border border-emerald-100 reveal" data-reveal style={{ transitionDelay: "200ms" }}>
             <p className="text-lg text-slate-700 mb-4">Не нашли ответ на свой вопрос?</p>
             <p className="text-slate-600">
               Позвоните по номеру <span className="font-semibold">+7 903 997-41-83</span> или

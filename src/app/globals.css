@@ -116,4 +116,81 @@
   .delay-1000 {
     animation-delay: 1s;
   }
+
+  @keyframes float-y {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes drift-x {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(18px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes ekg {
+    0% {
+      stroke-dashoffset: 1200;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-y 10s ease-in-out infinite;
+  }
+
+  .animate-float-slower {
+    animation: float-y 14s ease-in-out infinite;
+  }
+
+  .animate-drift {
+    animation: drift-x 16s ease-in-out infinite;
+  }
+
+  .ekg-line {
+    stroke-dasharray: 1200;
+    animation: ekg 6s linear infinite;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float-slow,
+    .animate-float-slower,
+    .animate-drift,
+    .ekg-line {
+      animation: none !important;
+    }
+
+    .reveal {
+      transition: none;
+      transform: none;
+      opacity: 1;
+    }
+  }
 }

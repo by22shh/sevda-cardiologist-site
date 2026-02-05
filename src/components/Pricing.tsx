@@ -18,7 +18,7 @@ export default function Pricing() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal" data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Стоимость онлайн-консультации
             </h2>
@@ -28,7 +28,7 @@ export default function Pricing() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 relative overflow-hidden reveal" data-reveal style={{ transitionDelay: "0ms" }}>
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-200/50 to-transparent rounded-bl-full" />
 
               <div className="text-center mb-6 relative z-10">
@@ -67,7 +67,7 @@ export default function Pricing() {
               </Button>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-600 via-teal-600 to-sky-600 rounded-2xl p-8 border border-emerald-400 shadow-2xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+            <div className="bg-gradient-to-br from-emerald-600 via-teal-600 to-sky-600 rounded-2xl p-8 border border-emerald-400 shadow-2xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 reveal" data-reveal style={{ transitionDelay: "80ms" }}>
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-700 to-sky-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="absolute top-4 right-4 bg-white/30 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-white shadow-lg border border-white/40">
@@ -110,7 +110,7 @@ export default function Pricing() {
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
             </div>
 
-            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 shadow-2xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 shadow-2xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 reveal" data-reveal style={{ transitionDelay: "160ms" }}>
               <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-emerald-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="text-center mb-6 relative z-10">
@@ -152,7 +152,7 @@ export default function Pricing() {
             </div>
           </div>
 
-          <div className="mt-12 text-center text-slate-600">
+          <div className="mt-12 text-center text-slate-600 reveal" data-reveal style={{ transitionDelay: "220ms" }}>
             <p className="text-sm">
               * Прием платный, ДМС не принимается. Стоимость и доступность услуг уточняйте при записи.
             </p>

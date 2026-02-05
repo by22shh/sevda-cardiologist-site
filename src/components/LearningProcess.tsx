@@ -46,7 +46,7 @@ export default function LearningProcess() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal" data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Как проходит консультация
             </h2>
@@ -73,7 +73,11 @@ export default function LearningProcess() {
                       index % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"
                     }`}
                   >
-                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100 hover:border-emerald-200 group">
+                    <div
+                      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100 hover:border-emerald-200 group reveal"
+                      data-reveal
+                      style={{ transitionDelay: `${index * 90}ms` }}
+                    >
                       <div
                         className={`flex items-center gap-4 ${
                           index % 2 === 0 ? "md:flex-row-reverse" : ""

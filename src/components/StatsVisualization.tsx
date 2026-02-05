@@ -66,13 +66,13 @@ export default function StatsVisualization() {
   return (
     <section className="py-24 bg-gradient-to-b from-emerald-50/40 to-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.05]">
-        <div className="absolute top-20 left-20 text-8xl font-serif text-emerald-900/30">❤</div>
-        <div className="absolute bottom-20 right-20 text-7xl font-serif text-emerald-900/30">⎯</div>
+        <div className="absolute top-20 left-20 text-8xl font-serif text-emerald-900/30 animate-float-slow">❤</div>
+        <div className="absolute bottom-20 right-20 text-7xl font-serif text-emerald-900/30 animate-float-slower">⎯</div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal" data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Опыт и доверие
             </h2>
@@ -85,7 +85,9 @@ export default function StatsVisualization() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 border border-emerald-100 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl p-6 border border-emerald-100 shadow-lg hover:shadow-xl transition-all duration-300 reveal"
+                data-reveal
+                style={{ transitionDelay: `${index * 80}ms` }}
               >
                 <div className={`text-4xl font-bold bg-gradient-to-r ${stat.accent} bg-clip-text text-transparent mb-2`}>
                   <AnimatedNumber end={stat.end} suffix={stat.suffix} />
@@ -96,7 +98,7 @@ export default function StatsVisualization() {
             ))}
           </div>
 
-          <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 border border-emerald-100 shadow-lg">
+          <div className="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-8 border border-emerald-100 shadow-lg reveal" data-reveal style={{ transitionDelay: "200ms" }}>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-emerald-700 mb-2">До 60 минут</div>

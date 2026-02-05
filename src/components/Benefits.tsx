@@ -65,7 +65,7 @@ export default function Benefits() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal" data-reveal>
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
               Направления и услуги
             </h2>
@@ -78,7 +78,9 @@ export default function Benefits() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-emerald-100 hover:border-emerald-300 hover:-translate-y-2 relative overflow-hidden"
+                className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-emerald-100 hover:border-emerald-300 hover:-translate-y-2 relative overflow-hidden reveal"
+                data-reveal
+                style={{ transitionDelay: `${index * 70}ms` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -99,7 +101,7 @@ export default function Benefits() {
             ))}
           </div>
 
-          <div className="mt-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600 rounded-2xl p-8 sm:p-12 text-white text-center shadow-2xl relative overflow-hidden group">
+          <div className="mt-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600 rounded-2xl p-8 sm:p-12 text-white text-center shadow-2xl relative overflow-hidden group reveal" data-reveal style={{ transitionDelay: "200ms" }}>
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-sky-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />

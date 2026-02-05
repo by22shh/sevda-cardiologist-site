@@ -7,23 +7,23 @@ import { useState } from "react";
 const education = [
   {
     year: "2008",
-    title: "НГМУ, лечебное дело",
+    title: "Новосибирский государственный медицинский университет — лечебное дело",
   },
   {
     year: "2009",
-    title: "Интернатура по терапии (Новосибирск)",
+    title: "Больница скорой помощи №2 на Тургенева — интернатура по терапии",
   },
   {
     year: "2011",
-    title: "Ординатура по кардиологии, НМИЦ им. ак. Е.Н. Мешалкина",
+    title: "Клиника им. Мешалкина на Речкуновской — ординатура по кардиологии",
   },
   {
     year: "2015",
-    title: "Аспирантура по кардиологии, НМИЦ им. ак. Е.Н. Мешалкина",
+    title: "НМИЦ им. ак. Е.Н. Мешалкина — аспирантура по кардиологии",
   },
   {
     year: "2016",
-    title: "Повышение квалификации по кардиологии, НГМУ",
+    title: "НГМУ — повышение квалификации по кардиологии",
   },
 ];
 
@@ -37,12 +37,12 @@ const experience = [
     title: "НМИЦ им. ак. Е.Н. Мешалкина — врач-аритмолог, младший научный сотрудник",
   },
   {
-    period: "Опыт работы",
-    title: "Клиника «Санитас» (Новосибирск)",
+    period: "С 2025 года",
+    title: "Клиника «Санитас» — врач-кардиолог, аритмолог",
   },
   {
-    period: "Опыт работы",
-    title: "Центр новых медицинских технологий (ЦНМТ), Новосибирск",
+    period: "Ранее",
+    title: "БСМП №2 и ЦНМТ — опыт работы",
   },
 ];
 
@@ -62,15 +62,15 @@ export default function About() {
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       {/* Soft background elements */}
       <div className="absolute inset-0 opacity-[0.08]">
-        <div className="absolute top-10 right-10 w-72 h-72 bg-emerald-200/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl" />
+        <div className="absolute top-10 right-10 w-72 h-72 bg-emerald-200/40 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl animate-float-slower" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image section */}
-            <div className="relative group">
+            <div data-reveal className="reveal relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-emerald-300 to-sky-300 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
               <div className="absolute -inset-2 bg-gradient-to-r from-emerald-200 to-sky-200 rounded-2xl opacity-30" />
 
@@ -104,7 +104,7 @@ export default function About() {
             </div>
 
             {/* Content section */}
-            <div>
+            <div data-reveal className="reveal" style={{ transitionDelay: "120ms" }}>
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
                 О враче
               </h2>
@@ -123,7 +123,7 @@ export default function About() {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-5">
+                <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-5 reveal" data-reveal style={{ transitionDelay: "200ms" }}>
                   <div className="flex items-center gap-3 mb-3">
                     <GraduationCap className="w-6 h-6 text-emerald-700" />
                     <h3 className="text-lg font-semibold text-slate-900">Образование</h3>
@@ -138,7 +138,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-5">
+                <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-5 reveal" data-reveal style={{ transitionDelay: "260ms" }}>
                   <div className="flex items-center gap-3 mb-3">
                     <Building2 className="w-6 h-6 text-emerald-700" />
                     <h3 className="text-lg font-semibold text-slate-900">Опыт работы</h3>
@@ -154,7 +154,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-emerald-100 bg-gradient-to-r from-emerald-50 to-sky-50 p-6">
+              <div className="rounded-2xl border border-emerald-100 bg-gradient-to-r from-emerald-50 to-sky-50 p-6 reveal" data-reveal style={{ transitionDelay: "320ms" }}>
                 <div className="flex items-center gap-3 mb-4">
                   <HeartPulse className="w-6 h-6 text-emerald-700" />
                   <h3 className="text-lg font-semibold text-slate-900">Ключевые компетенции</h3>

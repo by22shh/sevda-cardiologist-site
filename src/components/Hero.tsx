@@ -23,9 +23,9 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-emerald-50/60 to-sky-50">
       {/* Soft atmospheric blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-[420px] h-[420px] bg-emerald-200/40 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-sky-200/40 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 w-[360px] h-[360px] bg-teal-200/30 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -left-40 w-[420px] h-[420px] bg-emerald-200/40 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-sky-200/40 rounded-full blur-3xl animate-float-slower" />
+        <div className="absolute top-1/3 right-1/4 w-[360px] h-[360px] bg-teal-200/30 rounded-full blur-3xl animate-drift" />
       </div>
 
       {/* EKG line */}
@@ -38,6 +38,7 @@ export default function Hero() {
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"
+            className="ekg-line"
           />
         </svg>
       </div>
@@ -46,11 +47,11 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
           {/* Text block */}
           <div>
-            <div
-              className={`inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-emerald-200/70 shadow-sm mb-8 transition-all duration-700 ${
-                mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-              }`}
-            >
+          <div
+            className={`inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-emerald-200/70 shadow-sm mb-8 transition-all duration-700 ${
+              mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+            }`}
+          >
               <HeartPulse className="w-4 h-4 text-emerald-700" />
               <span className="text-sm font-medium text-slate-700">
                 Кардиолог • Аритмолог • Прием взрослых пациентов
@@ -148,7 +149,7 @@ export default function Hero() {
           </div>
 
           {/* Profile card */}
-          <div className="relative">
+          <div data-reveal className="reveal relative" style={{ transitionDelay: "120ms" }}>
             <div className="absolute -inset-4 bg-gradient-to-br from-emerald-200/60 to-sky-200/60 blur-2xl rounded-[40px]" />
             <div className="relative bg-white/85 backdrop-blur-sm border border-emerald-100 rounded-[32px] p-8 shadow-2xl">
               <div>
