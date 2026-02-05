@@ -165,7 +165,6 @@
   .ekg-line {
     stroke-dasharray: 1200;
     animation: ekg 6s linear infinite;
-    filter: drop-shadow(0 0 3px currentColor) drop-shadow(0 0 8px currentColor);
   }
 
   .reveal {
