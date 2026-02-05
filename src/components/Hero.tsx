@@ -151,15 +151,10 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-emerald-200/60 to-sky-200/60 blur-2xl rounded-[40px]" />
             <div className="relative bg-white/85 backdrop-blur-sm border border-emerald-100 rounded-[32px] p-8 shadow-2xl">
-              <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-2xl font-semibold shadow-lg">
-                  СБ
-                </div>
-                <div>
-                  <p className="text-lg font-semibold text-slate-900">Севда Байрамова</p>
-                  <p className="text-sm text-slate-600">Кардиолог-аритмолог</p>
-                  <p className="text-sm text-emerald-700 font-medium">Кандидат мед. наук</p>
-                </div>
+              <div>
+                <p className="text-lg font-semibold text-slate-900">Севда Байрамова</p>
+                <p className="text-sm text-slate-600">Кардиолог-аритмолог</p>
+                <p className="text-sm text-emerald-700 font-medium">Кандидат мед. наук</p>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-3">
