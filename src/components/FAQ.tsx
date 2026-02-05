@@ -93,8 +93,8 @@ export default function FAQ() {
           <div className="mt-12 text-center bg-gradient-to-r from-emerald-50 to-sky-50 rounded-2xl p-8 border border-emerald-100">
             <p className="text-lg text-slate-700 mb-4">Не нашли ответ на свой вопрос?</p>
             <p className="text-slate-600">
-              Позвоните в контакт-центр: <span className="font-semibold">+7 (383) 373-00-03</span> или
-              напишите на <span className="font-semibold">info@cnmt.ru</span>.
+              Позвоните по номеру <span className="font-semibold">+7 903 997-41-83</span> или
+              напишите в WhatsApp/Telegram по этому же номеру.
             </p>
           </div>
         </div>

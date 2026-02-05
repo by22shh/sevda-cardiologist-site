@@ -1,7 +1,12 @@
 "use client";
 
-import { FileText, Phone, Video } from "lucide-react";
+import { MessageCircle, Phone, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const phone = "+79039974183";
+const phoneDisplay = "+7 903 997-41-83";
+const whatsappLink = "https://wa.me/79039974183";
+const telegramLink = "https://t.me/+79039974183";
 
 export default function Contact() {
   return (
@@ -13,46 +18,37 @@ export default function Contact() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Онлайн-прием</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Связаться со мной</h2>
           <p className="text-xl text-slate-300 mb-12">
-            Консультация проходит по видеосвязи. Мы поможем выбрать удобный формат и время.
+            Онлайн-консультации. Выберите удобный способ связи
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-left">
-              <div className="flex items-center gap-3 mb-4">
-                <Video className="w-6 h-6 text-emerald-300" />
-                <h3 className="text-xl font-semibold">Видеоконсультация</h3>
+          <div className="grid sm:grid-cols-3 gap-6 mb-16">
+            <a href={telegramLink} target="_blank" rel="noopener noreferrer" className="group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
+                <MessageCircle className="w-12 h-12 mx-auto mb-4 text-emerald-300 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-lg mb-2">Telegram</h3>
+                <p className="text-slate-300 text-sm">по номеру телефона</p>
+                <p className="text-slate-100 text-sm mt-1">{phoneDisplay}</p>
               </div>
-              <p className="text-slate-200">
-                Формат Zoom/Google Meet/WhatsApp — подберем удобный для вас вариант.
-              </p>
-            </div>
+            </a>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-left">
-              <div className="flex items-center gap-3 mb-4">
-                <FileText className="w-6 h-6 text-sky-300" />
-                <h3 className="text-xl font-semibold">Разбор документов</h3>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
+                <Phone className="w-12 h-12 mx-auto mb-4 text-green-400 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
+                <p className="text-slate-300 text-sm">по номеру телефона</p>
+                <p className="text-slate-100 text-sm mt-1">{phoneDisplay}</p>
               </div>
-              <p className="text-slate-200">
-                ЭКГ, УЗИ сердца, анализы, выписки — разберем и дадим понятные рекомендации.
-              </p>
-            </div>
+            </a>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-left">
-              <div className="flex items-center gap-3 mb-4">
-                <Phone className="w-6 h-6 text-emerald-300" />
-                <h3 className="text-xl font-semibold">Телефон для записи</h3>
+            <a href={`tel:${phone}`} className="group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
+                <PhoneCall className="w-12 h-12 mx-auto mb-4 text-sky-300 group-hover:scale-110 transition-transform" />
+                <h3 className="font-semibold text-lg mb-2">Позвонить</h3>
+                <p className="text-slate-100 text-sm">{phoneDisplay}</p>
               </div>
-              <p className="text-slate-200">
-                <a href="tel:+79039974183" className="text-white hover:text-emerald-200">
-                  +7 903 997-41-83
-                </a>
-              </p>
-              <p className="text-slate-300 mt-2 text-sm">
-                Также можно оставить заявку через форму ниже.
-              </p>
-            </div>
+            </a>
           </div>
 
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 sm:p-12">

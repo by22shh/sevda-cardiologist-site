@@ -122,9 +122,6 @@ export default function About() {
                   состояние, анализирует медицинские документы и выстраивает индивидуальный
                   план лечения и профилактики.
                 </p>
-                <p className="text-slate-500">
-                  В документах может встречаться девичья фамилия <strong>Колотовкина</strong>.
-                </p>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
