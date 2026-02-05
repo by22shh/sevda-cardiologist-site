@@ -25,7 +25,7 @@ export default function Contact() {
 
           <div className="grid sm:grid-cols-3 gap-6 mb-16">
             <a href={telegramLink} target="_blank" rel="noopener noreferrer" className="group">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 min-h-[220px] h-full flex flex-col items-center justify-center text-center">
                 <MessageCircle className="w-12 h-12 mx-auto mb-4 text-emerald-300 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-lg mb-2">Telegram</h3>
                 <p className="text-slate-300 text-sm">по номеру телефона</p>
@@ -34,7 +34,7 @@ export default function Contact() {
             </a>
 
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 min-h-[220px] h-full flex flex-col items-center justify-center text-center">
                 <Phone className="w-12 h-12 mx-auto mb-4 text-green-400 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
                 <p className="text-slate-300 text-sm">по номеру телефона</p>
@@ -43,9 +43,10 @@ export default function Contact() {
             </a>
 
             <a href={`tel:${phone}`} className="group">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 min-h-[220px] h-full flex flex-col items-center justify-center text-center">
                 <PhoneCall className="w-12 h-12 mx-auto mb-4 text-sky-300 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-lg mb-2">Позвонить</h3>
+                <p className="text-slate-300 text-sm">по номеру телефона</p>
                 <p className="text-slate-100 text-sm">{phoneDisplay}</p>
               </div>
             </a>

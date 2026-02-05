@@ -88,15 +88,13 @@ export default function About() {
                       />
                     </div>
                   ) : (
-                    <div className="text-center p-8 relative z-10">
-                      <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-emerald-500 via-teal-500 to-sky-500 flex items-center justify-center shadow-2xl ring-4 ring-white ring-offset-4 ring-offset-emerald-50">
-                        <span className="text-6xl font-bold text-white drop-shadow-lg">СБ</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-slate-800 mb-2">
-                        Байрамова Севда Афгановна
-                      </h3>
-                      <p className="text-slate-600 font-medium">Кардиолог-аритмолог</p>
-                    </div>
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        backgroundImage:
+                          "radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.18), transparent 50%), radial-gradient(circle at 80% 30%, rgba(14, 165, 233, 0.18), transparent 55%)",
+                      }}
+                    />
                   )}
                 </div>
               </div>
