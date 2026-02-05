@@ -72,8 +72,8 @@ export default function Hero() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Диагностика и лечение нарушений ритма сердца, подбор антиаритмической терапии,
-              подготовка к РЧА и имплантации ЭКС/ИКД. Прием в Новосибирске.
+              Онлайн-консультации кардиолога и аритмолога: диагностика нарушений ритма,
+              подбор терапии, подготовка к РЧА и имплантации ЭКС/ИКД.
             </p>
 
             <div
@@ -171,10 +171,10 @@ export default function Hero() {
                   <p className="text-sm text-slate-500">Первичный прием</p>
                   <p className="text-base font-semibold text-slate-900">от 3000 ₽</p>
                 </div>
-                <div className="rounded-2xl border border-emerald-100 p-4 bg-gradient-to-br from-white to-emerald-50">
-                  <p className="text-sm text-slate-500">Клиники</p>
-                  <p className="text-base font-semibold text-slate-900">Санитас, ЦНМТ</p>
-                </div>
+              <div className="rounded-2xl border border-emerald-100 p-4 bg-gradient-to-br from-white to-emerald-50">
+                <p className="text-sm text-slate-500">Формат</p>
+                <p className="text-base font-semibold text-slate-900">Онлайн-консультации</p>
+              </div>
                 <div className="rounded-2xl border border-emerald-100 p-4 bg-gradient-to-br from-white to-emerald-50">
                   <p className="text-sm text-slate-500">Направления</p>
                   <p className="text-base font-semibold text-slate-900">Аритмии, СН, ИБС</p>

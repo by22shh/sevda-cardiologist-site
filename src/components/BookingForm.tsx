@@ -59,10 +59,10 @@ export default function BookingForm() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-              Записаться на консультацию
+              Записаться на онлайн-консультацию
             </h2>
             <p className="text-xl text-slate-600">
-              Оставьте заявку, и мы свяжемся с вами для подтверждения времени приема
+              Оставьте заявку, и мы свяжемся с вами для подтверждения времени видеоконсультации
             </p>
           </div>
 
@@ -130,7 +130,7 @@ export default function BookingForm() {
                   <Textarea
                     id="message"
                     required
-                    placeholder="Опишите жалобы, удобное время и предпочтительную клинику (Санитас / ЦНМТ)"
+                    placeholder="Опишите жалобы, удобное время и формат связи (Zoom/Meet/WhatsApp)"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={5}

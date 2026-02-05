@@ -5,8 +5,8 @@ import { Calendar, ClipboardList, HeartPulse, ShieldCheck, Stethoscope } from "l
 const steps = [
   {
     icon: Calendar,
-    title: "Запись на прием",
-    description: "Вы выбираете удобную клинику и время. Можно записаться по телефону или онлайн.",
+    title: "Запись на онлайн-консультацию",
+    description: "Вы выбираете удобное время. После подтверждения получите ссылку на видеосвязь.",
     color: "from-emerald-500 to-teal-500",
   },
   {

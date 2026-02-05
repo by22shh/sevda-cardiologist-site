@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700", "800"],
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Кардиолог-аритмолог в Новосибирске | Байрамова Севда Афгановна",
   description:
-    "Консультации кардиолога и аритмолога для взрослых. Диагностика и лечение нарушений ритма, подбор терапии, подготовка к РЧА и имплантации ЭКС/ИКД. Прием в клиниках Новосибирска.",
+    "Онлайн-консультации кардиолога и аритмолога для взрослых. Диагностика и лечение нарушений ритма, подбор терапии, подготовка к РЧА и имплантации ЭКС/ИКД.",
   keywords: [
     "кардиолог Новосибирск",
     "аритмолог",
@@ -41,14 +39,14 @@ export const metadata: Metadata = {
     url: "https://same-228gzkhba51-latest.netlify.app",
     title: "Кардиолог-аритмолог в Новосибирске | Байрамова Севда Афгановна",
     description:
-      "Диагностика и лечение аритмий, подбор антиаритмической терапии, подготовка к РЧА и имплантации ЭКС/ИКД. Прием взрослых пациентов.",
+      "Онлайн-консультации: диагностика и лечение аритмий, подбор антиаритмической терапии, подготовка к РЧА и имплантации ЭКС/ИКД.",
     siteName: "Кардиолог-аритмолог — Севда Байрамова",
   },
   twitter: {
     card: "summary_large_image",
     title: "Кардиолог-аритмолог в Новосибирске | Байрамова Севда Афгановна",
     description:
-      "Консультации кардиолога и аритмолога. Диагностика нарушений ритма, подбор терапии, подготовка к РЧА и ЭКС/ИКД.",
+      "Онлайн-консультации кардиолога и аритмолога. Диагностика нарушений ритма, подбор терапии, подготовка к РЧА и ЭКС/ИКД.",
   },
   robots: {
     index: true,
@@ -73,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${manrope.variable} ${playfair.variable}`}>
+    <html lang="ru" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         <Script
           crossOrigin="anonymous"
