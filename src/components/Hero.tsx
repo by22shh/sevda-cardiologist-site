@@ -39,6 +39,7 @@ export default function Hero() {
             strokeLinecap="round"
             strokeLinejoin="round"
             className="ekg-line"
+            style={{ color: "#0f766e" }}
           />
         </svg>
       </div>

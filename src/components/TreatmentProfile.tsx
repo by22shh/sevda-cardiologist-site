@@ -1,5 +1,7 @@
 "use client";
 
+import PulseDivider from "@/components/PulseDivider";
+
 const profile = [
   { value: 22, label: "Аритмия" },
   { value: 10, label: "Мерцательная аритмия" },
@@ -16,6 +18,7 @@ const profile = [
 export default function TreatmentProfile() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
+      <PulseDivider variant="top" color="emerald" />
       <div className="absolute inset-0 opacity-[0.05]">
         <div className="absolute top-10 right-10 w-72 h-72 bg-emerald-200/40 rounded-full blur-3xl animate-float-slow" />
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl animate-float-slower" />
