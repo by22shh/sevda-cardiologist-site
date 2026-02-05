@@ -6,29 +6,41 @@ import { useState } from "react";
 const testimonials = [
   {
     name: "Пациент +7 913 94XXXX",
-    role: "02.10.2025",
-    text: "Очень внимательная и грамотная. Подробно изучила обследования, объяснила план лечения и дала рекомендации по образу жизни.",
+    date: "02.10.2025",
+    short:
+      "Осталась очень довольна: внимательная, грамотная, подробно объясняет план лечения.",
+    full:
+      "На приём к доктору попала по отзывам пациентов. Осталась очень довольна. Севда Афгановна очень приятная в общении, внимательная, грамотная. Отлично выглядит, а это говорит о том, что врач занимается своим здоровьем и сможет мотивировать своих пациентов. Обратилась к доктору по поводу повышения АД и ЧСС, одышки. Выслушав всю мою историю, изучила анализы и проведённые обследования, провела осмотр, измерила давление. Назначила препараты, прописала диету, дала рекомендации по изменению образа жизни, направила на дообследование, всё подробно пояснила. Доходчиво ответила на все мои вопросы. Повторный приём через месяц. От души рекомендую доктора!",
     rating: 5,
     verified: true,
   },
   {
     name: "Пациент +7 913 75XXXX",
-    role: "08.08.2025",
-    text: "Полностью разобрала ситуацию, объяснила диагноз и назначила терапию. Очень высокий уровень компетенций.",
+    date: "08.08.2025",
+    short:
+      "Полностью прояснила ситуацию, поставила диагноз и назначила терапию.",
+    full:
+      "Обращались с дочерью по поводу синкопальных состояний. К доктору пришли по рекомендации. Были проведены обследования. Доктор полностью прояснила ситуацию, поставила диагноз, объяснила патогенез и назначила терапию.\n\nПонравилось:\nОчень высокие компетенции доктора. Собран самый подробный анамнез, проанализирована вся медицинская документация. Доктор владеет знаниями в смежных областях, комплексно подходит к лечению пациента, учитывая сопутствующие патологии. Были даны назначения и по терапии, и по коррекции образа жизни. Все рекомендации обоснованы. Один из самых эффективных приемов.\n\nНе понравилось:\nВсё было безупречно.",
     rating: 5,
     verified: true,
   },
   {
-    name: "Пациент +7 913 48XXXX",
-    role: "14.02.2024",
-    text: "Помогла разобраться в сложной ситуации с аритмией и корректно скорректировала лечение. Спасибо за поддержку.",
+    name: "Пациент +7 913 74XXXX",
+    date: "15.12.2023",
+    short:
+      "Внимательно выслушала, задала много вопросов и дала четкие рекомендации.",
+    full:
+      "Обратилась к врачу Севде Афгановна по записи, 15 декабря 2023 года. Меня очень беспокоили загруженные пульсации. Доктор внимательно выслушала мои жалобы, задавала много уточняющих вопросов, изучила все анализы, которые принесла с собой. Дала направление на дообследование и пригласила на повторный приём. Получила грамотные ответы на все интересующие и тревожащие меня вопросы. Замечательная доктор. Внимательная, общительная, задаёт много вопросов для выявления проблемы и дальнейшего лечения! Рекомендую данного доктора, очень грамотная, не безразличная. Приёмом осталась довольна.\n\nПонравилось:\nОчень понравился профессионализм и внимание к пациенту.",
     rating: 5,
     verified: true,
   },
   {
     name: "Пациент +7 983 28XXXX",
-    role: "20.04.2023",
-    text: "Внимательно выслушала, всё доходчиво объяснила и дала четкие рекомендации. Осталась очень довольна.",
+    date: "20.04.2023",
+    short:
+      "Внимательно выслушала, всё доходчиво объяснила. Очень довольна приемом.",
+    full:
+      "Сегодня была на приеме у Севды Афгановны по поводу экстрасистолии. Сказать, что мне безумно понравился доктор и её отношение к пациенту, не сказать ничего! Севда Афгановна не только безумно грамотный доктор, но и просто прекрасный человек. Внимательно выслушала, всё доходчиво объяснила и рассказала. Если ещё понадобится кардиолог, то только к Севде Афгановне. Рекомендую однозначно. Доктору большое спасибо и низкий поклон!",
     rating: 5,
     verified: true,
   },
@@ -36,18 +48,26 @@ const testimonials = [
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [expanded, setExpanded] = useState(false);
 
   const nextTestimonial = () => {
+    setExpanded(false);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
+    setExpanded(false);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   const goToTestimonial = (index: number) => {
+    setExpanded(false);
     setCurrentIndex(index);
   };
+
+  const current = testimonials[currentIndex];
+  const text = expanded ? current.full : current.short;
+  const paragraphs = text.split("\n");
 
   return (
     <section className="py-24 bg-emerald-50/40 relative overflow-hidden">
@@ -76,7 +96,7 @@ export default function Testimonials() {
                   <Quote className="w-12 h-12 text-emerald-200 mb-6" />
 
                   <div className="flex gap-1 mb-6">
-                    {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                    {[...Array(current.rating)].map((_, i) => (
                       <Star
                         key={i}
                         className="w-6 h-6 fill-emerald-400 text-emerald-400"
@@ -84,24 +104,36 @@ export default function Testimonials() {
                     ))}
                   </div>
 
-                  <p className="text-slate-700 leading-relaxed mb-8 text-lg md:text-xl italic">
-                    "{testimonials[currentIndex].text}"
-                  </p>
+                  <div className="text-slate-700 leading-relaxed mb-6 text-lg md:text-xl">
+                    {paragraphs.map((paragraph, idx) => (
+                      <p key={idx} className={idx === 0 ? "" : "mt-4"}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
 
-                  <div className="border-t border-slate-200 pt-6 flex items-center justify-between">
+                  <button
+                    type="button"
+                    onClick={() => setExpanded((prev) => !prev)}
+                    className="text-emerald-700 text-sm font-semibold hover:text-emerald-800"
+                  >
+                    {expanded ? "Скрыть" : "Подробнее"}
+                  </button>
+
+                  <div className="border-t border-slate-200 pt-6 flex items-center justify-between mt-6">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
                         <p className="font-semibold text-slate-900 text-lg">
-                          {testimonials[currentIndex].name}
+                          {current.name}
                         </p>
-                        {testimonials[currentIndex].verified && (
+                        {current.verified && (
                           <div className="flex items-center gap-1 px-2 py-0.5 bg-emerald-100 rounded-full">
                             <CheckCircle className="w-3 h-3 text-emerald-600" />
                             <span className="text-xs font-medium text-emerald-700">Проверено</span>
                           </div>
                         )}
                       </div>
-                      <p className="text-sm text-slate-600">{testimonials[currentIndex].role}</p>
+                      <p className="text-sm text-slate-600">{current.date}</p>
                     </div>
                   </div>
                 </div>
